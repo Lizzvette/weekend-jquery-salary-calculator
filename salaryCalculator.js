@@ -17,21 +17,4 @@ $(document).ready(onReady);{
   //salaryCalculator
 }
 
-// view notes - can I put tables into JS easily?
-let nameLater = 
-<form class ='form' id="inputForm">      
-<table>
-  <thead>
-    <tr>
-
-<td></td>
-
-
-
-    </tr>
-
-  </thead>
-
-</table>
-
-</form>
+$
