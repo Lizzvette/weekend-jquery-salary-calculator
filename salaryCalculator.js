@@ -9,7 +9,7 @@ function onReady (){
 //storing on click 
 //take html input to add to DOM
 
-//id is #
+//id is #  ID overrides Class
 //class is .
 
 //NEXT STEPS:
@@ -17,14 +17,25 @@ function onReady (){
 // 2.) grab index.html employee data so function add employees ()
 // append employees and append delete button give an id 
 
+// Future do 
+//$(onReady);
+//function onReady (){
+  //console.log('JQ;)
+//}
+
 $(document).ready(onReady);
 
 let calculateMthlyCost = []; // you push into this later the objects // 
 
 function onReady() {
   console.log ('on ready') ;
-// Hmmm my console log is ugly... 
-
+// 5.) Matt placed loop here ie.: 
+//for employee of employee){
+  //  $(`employeeList`).append(`
+  //) <tr>
+  // <td: [  "<table><tbody><tr>", "</tr></tbody></table>"]
+//} I did function onAddEmployees and Lines 106-110
+// Template Literal is with a string varible placed inside
 //1.)
 // A.) turn on submit button to calculate monthly cost (so all EE monthly salaries correct?)
 // Hey JQuery get employeeForm (Event Listener)
@@ -48,7 +59,6 @@ for (let i= 0; i< calculateMthlyCost.length; i++){
 }
 
 // Hey JQuery grab this
-
 function onAddEmployee (   ) {
 // myEmployees
   console.log ('add employee');
@@ -75,25 +85,35 @@ function onDeleteEmployee ( ) {
 // render/get index.html to DOM
 
 
-//create my employees objects  // DISCUSS AT NEXT STUDY GROUP WHEN/WHERE FLOWS...FOR 
-let myEmployees = {
-  firstName: firstName,
-  lastName: lastName,
-  id: id,
-  title: title,
-  annualSalary: annualSalary
+//  4.    create my employees objects  // DISCUSS AT NEXT STUDY GROUP WHEN/WHERE FLOWS...FOR 
+let myEmployees = [{
+  firstName: 'firstName', // let it be known it's a string ' '
+  lastName: 'lastName',
+  id: 1, // if going to be a number then input number(s); so set datatype stored.
+  title: 'title',
+  annualSalary: 15000
+]
 }// end employee object
 
 // the object has to be pushed  BUT I need ... JUST PUSH 
 calculateMthlyCost.push(myEmployees );
-console.log ( );
+console.log ( 'calculateMthlyCost' calculateMthlyCost);
+
+//empty <tbody> 
+$('#employeeForm').empty();
 
 // empty tbody, then render to the DOM loop
 for ( let calculate  of totalcalculateMthlyCost   ){
 $('#employeeForm').append ( 
-  `#`
-)
+  <tr>
+	<th>${First Name}</th> 
+			<th>${Last Name}</th>
+            <th>${ID Number}</th>
+            <th>${Job Title}</th>
+            <th>${Annual Salary}</th>
+           <th> <button class="DeleteBtn">Delete</button>
+  </th></tr>
+
+);
 }
-// RETURN and TEST !!!!!!!
-
-
+// RETURN and TEST !!!!!!
