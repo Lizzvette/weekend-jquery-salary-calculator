@@ -19,10 +19,11 @@ function onReady (){
 
 $(document).ready(onReady);
 
-let calculateMthlyCost []; // you push into this later the objects // 
+let calculateMthlyCost = []; // you push into this later the objects // 
 
 function onReady() {
-  console.log ('on ready') 
+  console.log ('on ready') ;
+// Hmmm my console log is ugly... 
 
 //1.)
 // A.) turn on submit button to calculate monthly cost (so all EE monthly salaries correct?)
@@ -38,6 +39,15 @@ $(document).on(click, 'DeleteBtn', onDeleteEmployee); // function create onDelet
 
 //2.) QUESTION B.) : my HTML form id or use div container in "Hey JQuery Above" class so my parameter .container? or each input id with commas?
 
+// loop thru
+function totalcalculateMthlyCost (){
+console.log ('totalcalculationMthlyCost');
+let sum = 0;
+for (let i= 0; i< calculateMthlyCost.length; i++){
+  sum += calculateMthlyCost[i].annualSalary
+}
+
+// Hey JQuery grab this
 
 function onAddEmployee (   ) {
 // myEmployees
@@ -50,10 +60,12 @@ let annualSalary = Number($(`#annualSalaryInput`).val());
   // conditional if/else for "If the total monthly cost exceeds $20,000, add a red background color to the total monthly cost."
 }
 
-function totalcalculateMthlyCost(){ // loop thru to find
-  let sum = 0;
 
-}
+// function totalcalculateMthlyCost(){ // loop thru to find - JUST create it NOW! You know your total 
+//   let sum = 0;
+//   for (let i = 0;i < calculateMthlyCost; i++)
+// }
+console.log('add employee');
 
 function onDeleteEmployee ( ) {
 
@@ -72,10 +84,16 @@ let myEmployees = {
   annualSalary: annualSalary
 }// end employee object
 
-// the object has to be pushed ? BUT I need ... JUST PUSH 
+// the object has to be pushed  BUT I need ... JUST PUSH 
 calculateMthlyCost.push(myEmployees );
+console.log ( );
 
+// empty tbody, then render to the DOM loop
+for ( let calculate  of totalcalculateMthlyCost   ){
+$('#employeeForm').append ( 
+  `#`
+)
+}
 // RETURN and TEST !!!!!!!
-console.log('employees', myEmployees);
 
 
