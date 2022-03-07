@@ -29,12 +29,9 @@ let calculateMthlyCost = []; // you push into this later the objects //
 
 function onReady() {
   console.log ('on ready') ;
-// 5.) Matt placed loop here ie.: 
-//for employee of employee){
-  //  $(`employeeList`).append(`
-  //) <tr>
-  // <td: [  "<table><tbody><tr>", "</tr></tbody></table>"]
-//} I did function onAddEmployees and Lines 106-110
+  //Matt added: render The Employees();
+  //$(`submitbutton        )
+
 // Template Literal is with a string varible placed inside
 //1.)
 // A.) turn on submit button to calculate monthly cost (so all EE monthly salaries correct?)
@@ -68,8 +65,8 @@ let lastName = $(`#lastNameInput`).val();
 let id = $(`#idInput`).val();
 let annualSalary = Number($(`#annualSalaryInput`).val());
   // conditional if/else for "If the total monthly cost exceeds $20,000, add a red background color to the total monthly cost."
-}
 
+}
 
 // function totalcalculateMthlyCost(){ // loop thru to find - JUST create it NOW! You know your total 
 //   let sum = 0;
@@ -77,7 +74,7 @@ let annualSalary = Number($(`#annualSalaryInput`).val());
 // }
 console.log('add employee');
 
-function onDeleteEmployee ( ) {
+function onDeleteEmployee ( ) { // is this function needed?
 
   // Read instruction....remove on click
   // I want to remove within the table the EEs (table form id "employeesForm BUT just need my onDeleteEmployee and grab calculateMthlyCost")
@@ -95,15 +92,16 @@ let myEmployees = [{
 ]
 }// end employee object
 
-// the object has to be pushed  BUT I need ... JUST PUSH 
+//  
 calculateMthlyCost.push(myEmployees );
 console.log ( 'calculateMthlyCost' calculateMthlyCost);
 
 //empty <tbody> 
 $('#employeeForm').empty();
 
-// empty tbody, then render to the DOM loop
-for ( let calculate  of totalcalculateMthlyCost   ){
+// empty tbody, then render to the DOM loop...#5
+function renderTheEmployees // change function name ; but I did have the rest but not titled with a function
+for ( let calculate  of totalcalculateMthlyCost   ){   // should  th be    td  - try...
 $('#employeeForm').append ( 
   <tr>
 	<th>${First Name}</th> 
